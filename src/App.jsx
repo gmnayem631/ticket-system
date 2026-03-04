@@ -1,9 +1,10 @@
 import "./App.css";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
     <>
-      <h1>CS - Ticket System</h1>
+      <Navbar></Navbar>
     </>
   );
 }
