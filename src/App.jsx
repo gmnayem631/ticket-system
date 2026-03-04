@@ -28,7 +28,10 @@ function App() {
             setAddedTickets={setAddedTickets}
           ></CustomerTickets>
         </Suspense>
-        <Status></Status>
+        <Status
+          addedTickets={addedTickets}
+          setAddedTickets={setAddedTickets}
+        ></Status>
       </div>
 
       <Footer></Footer>
