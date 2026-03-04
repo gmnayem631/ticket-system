@@ -1,5 +1,6 @@
 import React from "react";
 import calenderImg from "../../assets/calendar.png";
+import { toast } from "react-toastify";
 
 const TicketCard = ({ ticket, addedTickets, setAddedTickets }) => {
   const {
@@ -15,6 +16,9 @@ const TicketCard = ({ ticket, addedTickets, setAddedTickets }) => {
   const handleTask = (ticket) => {
     const updatedTickets = [...addedTickets, ticket];
     setAddedTickets(updatedTickets);
+    toast.info("Ticket added to task status", {
+      position: "top-right",
+    });
   };
   return (
     <div

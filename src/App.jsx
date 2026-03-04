@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Status from "./components/Status/Status";
 import Loader from "./components/Loader/Loader";
 import Footer from "./components/Footer/Footer";
+import { ToastContainer } from "react-toastify";
 
 const ticketsPromise = fetch("./tickets.json").then((response) =>
   response.json(),
@@ -40,6 +41,7 @@ function App() {
       </div>
 
       <Footer></Footer>
+      <ToastContainer />
     </>
   );
 }

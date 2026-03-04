@@ -1,6 +1,6 @@
 import React from "react";
 
-const ResolvedTask = ({ resolvedTickets, setResolvedTickets }) => {
+const ResolvedTask = ({ resolvedTickets }) => {
   console.log(resolvedTickets);
   return (
     <div className="">
@@ -10,7 +10,7 @@ const ResolvedTask = ({ resolvedTickets, setResolvedTickets }) => {
           <p className="text-[#627382]">No resolved tasks yet</p>
         ) : (
           resolvedTickets.map((ticket) => (
-            <div key={ticket.id} className="bg-white p-3 rounded-lg">
+            <div key={ticket.id} className="bg-[#E0E7FF] p-3 rounded-lg">
               {ticket.title}
             </div>
           ))

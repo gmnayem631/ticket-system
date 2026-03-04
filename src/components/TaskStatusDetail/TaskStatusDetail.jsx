@@ -1,4 +1,5 @@
 import React from "react";
+import { toast } from "react-toastify";
 
 const TaskStatusDetail = ({
   oneAddedTicket,
@@ -16,8 +17,9 @@ const TaskStatusDetail = ({
     const updatedResolvedTickets = [...resolvedTickets, oneAddedTicket];
     setAddedTickets(filteredTickets);
     setResolvedTickets(updatedResolvedTickets);
-
-    console.log(updatedResolvedTickets);
+    toast.success("Task Resolved", {
+      position: "top-right",
+    });
   };
   return (
     <div
