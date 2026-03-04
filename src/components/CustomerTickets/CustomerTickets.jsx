@@ -1,7 +1,7 @@
 import React, { use } from "react";
 import TicketCard from "../TicketCard/TicketCard";
 
-const CustomerTickets = ({ ticketsPromise }) => {
+const CustomerTickets = ({ ticketsPromise, addedTickets, setAddedTickets }) => {
   const ticketsData = use(ticketsPromise);
 
   return (
@@ -13,7 +13,14 @@ const CustomerTickets = ({ ticketsPromise }) => {
       {/* Card */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         {ticketsData.map((ticket) => {
-          return <TicketCard key={ticket.id} ticket={ticket}></TicketCard>;
+          return (
+            <TicketCard
+              key={ticket.id}
+              ticket={ticket}
+              addedTickets={addedTickets}
+              setAddedTickets={setAddedTickets}
+            ></TicketCard>
+          );
         })}
       </div>
     </div>

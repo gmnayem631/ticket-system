@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import "./App.css";
 import Banner from "./components/Banner/Banner";
 import CustomerTickets from "./components/CustomerTickets/CustomerTickets";
@@ -12,13 +12,21 @@ const ticketsPromise = fetch("./tickets.json").then((response) =>
 );
 
 function App() {
+  const [addedTickets, setAddedTickets] = useState([]);
   return (
     <>
       <Navbar></Navbar>
-      <Banner></Banner>
+      <Banner
+        addedTickets={addedTickets}
+        setAddedTickets={setAddedTickets}
+      ></Banner>
       <div className="max-w-7xl mx-auto my-16 flex gap-6">
         <Suspense fallback={<Loader></Loader>}>
-          <CustomerTickets ticketsPromise={ticketsPromise}></CustomerTickets>
+          <CustomerTickets
+            ticketsPromise={ticketsPromise}
+            addedTickets={addedTickets}
+            setAddedTickets={setAddedTickets}
+          ></CustomerTickets>
         </Suspense>
         <Status></Status>
       </div>
