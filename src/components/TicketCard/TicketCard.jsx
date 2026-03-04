@@ -15,7 +15,6 @@ const TicketCard = ({ ticket, addedTickets, setAddedTickets }) => {
   const handleTask = (ticket) => {
     const updatedTickets = [...addedTickets, ticket];
     setAddedTickets(updatedTickets);
-    console.log(updatedTickets);
   };
   return (
     <div

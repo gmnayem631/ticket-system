@@ -1,9 +1,14 @@
 import React from "react";
 import TaskStatusDetail from "../TaskStatusDetail/TaskStatusDetail";
 
-const TaskStatus = ({ addedTickets }) => {
+const TaskStatus = ({
+  addedTickets,
+  setAddedTickets,
+  resolvedTickets,
+  setResolvedTickets,
+}) => {
   return (
-    <div className="">
+    <div className="pt-7">
       <div className="flex flex-col gap-3">
         <h4 className="text-[#34485A] font-semibold text-2xl">Task Status</h4>
         {addedTickets.length === 0 ? (
@@ -16,6 +21,10 @@ const TaskStatus = ({ addedTickets }) => {
               <TaskStatusDetail
                 key={oneAddedTicket.id}
                 oneAddedTicket={oneAddedTicket}
+                addedTickets={addedTickets}
+                setAddedTickets={setAddedTickets}
+                resolvedTickets={resolvedTickets}
+                setResolvedTickets={setResolvedTickets}
               ></TaskStatusDetail>
             );
           })
