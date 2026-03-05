@@ -1,16 +1,23 @@
-# React + Vite
+## 1) What is **JSX**, and why is it used?
+- **JSX** refers to **JavaScript XML**. It allows to write HTML markup directly in JavaScript code.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## 2) What is the difference between **State** and **Props**?
+- **Props** (properties) are **read-only** and are generally passed **from a parent component to a child component**. **State** is **data managed internally inside a component** and can change over time. Essentially, **props are passed from outside**, while **state is controlled within the component**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 3) What is the **useState** hook, and how does it work?
+- **useState** hook lets you to store and track a state inside a function. It takes an **initial value** (e.g., `null`, empty array, string, number, etc.). The initial value can be changed using the setter function and it re-renders the component it is in.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 4)	How can you share state between components in React?
+- States in react can be shared through **state lift up** between components. Generally, parent passes the state to the child component. **Context API** is another option to share state across components.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 5) How is event handling done in React?
+-	You need to define a handler function and pass it to the event attribute **(onClick)** for event handling in react.
+
