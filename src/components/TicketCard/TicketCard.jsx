@@ -16,7 +16,7 @@ const TicketCard = ({ ticket, addedTickets, setAddedTickets }) => {
   const handleTask = (ticket) => {
     const updatedTickets = [...addedTickets, ticket];
     setAddedTickets(updatedTickets);
-    toast.info("Ticket added to task status", {
+    toast.info("Issue is in progress", {
       position: "top-right",
     });
   };
